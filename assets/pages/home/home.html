@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+       <script>
+        function checkToken() {
+            let token = localStorage.getItem('token');
+        
+            if (!token) {
+              
+                window.location.href = '/reg.html';
+            }
+        }
+        
+        
+        window.onload = checkToken;
+        window.onpopstate  =  checkToken;
+
+   
+        </script>
+ 
+</head>
+<body>
+
+    <div id="productsList" class="products-list"></div>
+<div id="addProductForm" class="add-product-form">
+    <h2>Add New Product</h2>
+    <label for="productName">Name:</label>
+    <input type="text" id="productName">
+    <label for="productPrice">Price:</label>
+    <input type="number" id="productPrice">
+    <label for="productCategory">Category:</label>
+    <input type="text" id="productCategory">
+    <label for="productImage">Image URL:</label>
+    <input type="text" id="productImage">
+    <button id="addProductBtn">Add Product</button>
+</div>
+
+
+<script src="/assets/js/admin.js"></script>
+</body>
+</html>
+
+   
+   

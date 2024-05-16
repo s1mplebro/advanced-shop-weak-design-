@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "json-server": "^1.0.0-alpha.23",
+    "node-fetch": "^3.3.2"
+  },
+  "scripts": {
+    "server": "json-server -w db.json --port 8000"
+  }
+}
